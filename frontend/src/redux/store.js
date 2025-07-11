@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import photographerSlice from "./slices/Photographer.slice";
+import userDataSlice from "./slices/userData.slice";
+import filterDataSlice from "./slices/filterData.slice";
 
 const store = configureStore({
   reducer: {
-    photographer: photographerSlice,
+    userData: userDataSlice,
+    filterData: filterDataSlice,
   },
 });
 
