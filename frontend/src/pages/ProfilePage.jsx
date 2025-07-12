@@ -9,75 +9,100 @@ import {
   Button,
   Modal,
   TextField,
+  Container,
+  Stack,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import PhotoGallery from "../components/PhotoGallery";
+import { handleFilterUser } from "../redux/slices/userData.slice";
+import Slider from "../components/Slider";
 
 const ProfilePage = () => {
   const { id } = useParams();
-  const [photographer, setPhotographer] = useState(null);
+  const userData = useSelector((state) => state.userData.data);
+  const user = useSelector((state) => state.userData.filteredUser);
+  const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({ name: "", message: "" });
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3001/photographers/${id}`)
-      .then((res) => setPhotographer(res.data))
-      .catch((err) => console.error(err));
-  }, [id]);
+    if (userData && id) {
+      const filterUser = userData.find(
+        (item) => Number(item.id) === Number(id)
+      );
+      dispatch(handleFilterUser(filterUser));
+      console.log("Filtered User:", filterUser);
+    }
+  }, [id, userData, dispatch]);
 
-  const handleOpen = () => setOpenModal(true);
-  const handleClose = () => setOpenModal(false);
+  // const handleOpen = () => setOpenModal(true);
+  // const handleClose = () => setOpenModal(false);
 
-  const handleFormChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // const handleFormChange = (e) =>
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = () => {
-    console.log("Inquiry submitted", formData);
-    handleClose();
-  };
+  // const handleSubmit = () => {
+  //   console.log("Inquiry submitted", formData);
+  //   handleClose();
+  // };
 
-  if (!photographer) return <Typography>Loading...</Typography>;
+  if (!user) return <Typography> User Not Found</Typography>;
 
   return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        {photographer.name}
-      </Typography>
-      <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-        {photographer.location}
-      </Typography>
-      <Typography variant="body1" sx={{ mb: 2 }}>
-        {photographer.bio}
-      </Typography>
+    <Box sx={{ mt: 10 }}>
+      <Container sx={{ boxShadow: "0px 0px 5px #ccc", p: 5 }}>
+        <Grid container rowSpacing={3} columnSpacing={1}>
+          <Grid
+            size={{ xs: 12, sm: 6, md: 5 }}
+            sx={{
+              backgroundColor: "primary.main",
+              px: 4,
+              py: 2,
+              color: "#fff",
+              borderRadius: 2,
+            }}
+          >
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
+              {user.name}
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>
+              {user.bio}
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              Location: {user.location}
+            </Typography>
+            <Typography variant="subtitle1">Price: ₹{user.price}</Typography>
 
-      <Typography variant="subtitle1">Styles: {photographer.styles.join(", ")}</Typography>
-      <Typography variant="subtitle1">Tags: {photographer.tags.join(", ")}</Typography>
-      <Typography variant="subtitle1">Price: ₹{photographer.price}</Typography>
+            <Typography variant="subtitle1">
+              Styles: {user.styles.join(", ")}
+            </Typography>
+            <Typography variant="subtitle1">
+              Tags: {user.tags.join(", ")}
+            </Typography>
 
-      <Rating value={photographer.rating} precision={0.1} readOnly sx={{ mt: 1 }} />
-
-      {/* Gallery */}
-      <Typography variant="h6" sx={{ mt: 4 }}>
-        Portfolio
-      </Typography>
-      <Grid container spacing={2} sx={{ mt: 1 }}>
-        {photographer.portfolio.map((img, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="200"
-                image={img}
-                alt={`portfolio-${i}`}
-              />
-            </Card>
+            <Rating
+              value={user.rating}
+              precision={0.1}
+              readOnly
+              sx={{ mt: 1 }}
+            />
           </Grid>
-        ))}
-      </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 7 }}>
+            <Typography variant="h5" sx={{ textAlign: "center", mb: 4 }}>
+              Portfolio Gallery
+            </Typography>
+            <PhotoGallery data={user.portfolio} />
+          </Grid>
+        </Grid>
+      </Container>
 
-      {/* Reviews */}
-      <Typography variant="h6" sx={{ mt: 4 }}>
+      <Stack sx={{border:'2px solid red',py:5,mt:5}}>
+      <Typography>Reviews</Typography>
+        <Slider data={user.reviews}/>
+      </Stack>
+
+      {/* <Typography variant="h6" sx={{ mt: 4 }}>
         Reviews
       </Typography>
       <Box>
@@ -91,15 +116,15 @@ const ProfilePage = () => {
             <Typography>{rev.comment}</Typography>
           </Box>
         ))}
-      </Box>
+      </Box> */}
 
       {/* Inquiry Button */}
-      <Button variant="contained" sx={{ mt: 4 }} onClick={handleOpen}>
+      {/* <Button variant="contained" sx={{ mt: 4 }} onClick={handleOpen}>
         Send Inquiry
-      </Button>
+      </Button> */}
 
       {/* Inquiry Modal */}
-      <Modal open={openModal} onClose={handleClose}>
+      {/* <Modal open={openModal} onClose={handleClose}>
         <Box
           sx={{
             width: 400,
@@ -139,7 +164,7 @@ const ProfilePage = () => {
             Submit
           </Button>
         </Box>
-      </Modal>
+      </Modal> */}
     </Box>
   );
 };

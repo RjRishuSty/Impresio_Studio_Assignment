@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [], //* Store photographer user data
-  filtered: [],
+  filteredUser: null,
 };
 
 const photographerSlice = createSlice({
@@ -12,11 +12,11 @@ const photographerSlice = createSlice({
     handleUserData: (state, action) => {
       state.data = action.payload;
     },
-    handleFilter: (state, action) => {
-      state.filtered = action.payload;
+    handleFilterUser: (state, action) => {
+      state.filteredUser = action.payload;
     },
   },
 });
 
-export const { handleFilter,handleUserData } = photographerSlice.actions;
+export const { handleFilterUser, handleUserData } = photographerSlice.actions;
 export default photographerSlice.reducer;

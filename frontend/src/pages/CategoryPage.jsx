@@ -4,13 +4,13 @@ import axios from "axios";
 import Cards from "../components/Cards";
 import SidebarFilter from "../components/SidebarFilter";
 import { handleUserData } from "../redux/slices/userData.slice";
-import {useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
+import SearchInput from "../components/SearchInput";
 
 const CategoryPage = () => {
-
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const userData = useSelector((state)=>state.userData.data);
+  const userData = useSelector((state) => state.userData.data);
   console.log("in CataPage Slice", userData);
 
   // const navigate = useNavigate();
@@ -33,22 +33,35 @@ const CategoryPage = () => {
   }, []);
 
   return (
-    <Stack component="section" sx={{ border: "2px solid red",minHeight:'90vh' }}>
-      <Grid container spacing={2} sx={{ my: 2 }}>
-        <SidebarFilter />
-        <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ border: "2px solid black",minHeight:'100%' }}>
+    <Stack component="section">
+      <Grid container spacing={2}>
+        <Grid
+          size={{ xs: 12, sm: 4, md: 3 }}
+          sx={{
+            p: 2,
+            height: "100vh",
+            boxShadow: "5px 0px 5px -2px rgba(0,0,0,0.2)",
+          }}
+        >
+          <SidebarFilter />
+        </Grid>
+
+        <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ height: "100vh",}}>
           {loading ? (
             <CircularProgress />
           ) : userData.length === 0 ? (
             <Typography>No photographers found.</Typography>
           ) : (
-            <Grid container spacing={2}>
-              {userData.map((item) => (
-                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-                  <Cards data={item} />
-                </Grid>
-              ))}
-            </Grid>
+            <>
+              <SearchInput />
+              <Grid container spacing={2} sx={{ p: 1 }}>
+                {userData.map((item) => (
+                  <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
+                    <Cards data={item} />
+                  </Grid>
+                ))}
+              </Grid>
+            </>
           )}
         </Grid>
       </Grid>
