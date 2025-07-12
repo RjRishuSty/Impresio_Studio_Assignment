@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Typography, CircularProgress, Stack } from "@mui/material";
+import { Grid, Typography, Stack } from "@mui/material";
 import SearchOffIcon from "@mui/icons-material/SearchOff";
 import axios from "axios";
 import Cards from "../components/Cards";
@@ -7,6 +7,7 @@ import SidebarFilter from "../components/SidebarFilter";
 import { handleUserData } from "../redux/slices/userData.slice";
 import { useDispatch, useSelector } from "react-redux";
 import SearchInput from "../components/SearchInput";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const CategoryPage = () => {
 
@@ -51,7 +52,7 @@ const CategoryPage = () => {
         <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ height: "100vh" }}>
           <SearchInput />
           {loading ? (
-            <CircularProgress />
+            <SkeletonLoader/>
           ) : displayData.length === 0 ? (
             <Stack alignItems="center" justifyContent="center" sx={{ mt: 6 }}>
               <SearchOffIcon color="disabled" sx={{ fontSize: 50 }} />

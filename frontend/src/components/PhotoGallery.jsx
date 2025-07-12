@@ -1,10 +1,8 @@
 import { Box, ImageList, ImageListItem } from "@mui/material";
 import React from "react";
-import img1 from "../assets/photo1.jpg";
-import img2 from "../assets/photo2.jpg";
 
 const PhotoGallery = ({ data }) => {
-  console.log("photodata", data);
+  if(!data) return;
 
   return (
     <ImageList
@@ -23,7 +21,7 @@ const PhotoGallery = ({ data }) => {
           <ImageListItem key={index}>
             <Box
               component="img"
-              src={index === 0 ? img1 : img2}
+              src={item}
               sx={{
                 width: "320px",
                 height: "320px",

@@ -44,8 +44,6 @@ const SidebarFilter = () => {
      dispatch(handleFilter(result));
   }, [price,rating,styles,userData,dispatch]);
 
-  console.log("Redux", price, rating, styles);
-
   //* This handle work only styles change .................
   const handleStyleChange = (style, checked) => {
     const updatedStyles = checked

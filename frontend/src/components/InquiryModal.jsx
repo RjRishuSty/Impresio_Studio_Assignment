@@ -23,7 +23,7 @@ const InquiryModal = ({ openModal, setOpenModal }) => {
     console.log("Inquiry submitted", formData);
     handleClose();
   };
-  console.log(formData)
+  
   return (
     <Dialog component="form" onSubmit={handleSubmit} open={openModal} onClose={handleClose}>
       <DialogTitle>Send Inquiry</DialogTitle>
