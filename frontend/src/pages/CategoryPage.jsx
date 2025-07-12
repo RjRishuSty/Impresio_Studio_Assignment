@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Typography, CircularProgress, Stack } from "@mui/material";
+import SearchOffIcon from "@mui/icons-material/SearchOff";
 import axios from "axios";
 import Cards from "../components/Cards";
 import SidebarFilter from "../components/SidebarFilter";
@@ -8,19 +9,20 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchInput from "../components/SearchInput";
 
 const CategoryPage = () => {
+
+  //* All states...............
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const userData = useSelector((state) => state.userData.data);
-  console.log("in CataPage Slice", userData);
+  const filterData = useSelector((state) => state.filterData.data);
+  const displayData = filterData.length > 0 ? filterData : userData;
 
-  // const navigate = useNavigate();
-
+  //* Fecth Photographer User data ................
   useEffect(() => {
     const fetchPhotographersData = async () => {
       try {
         setLoading(true);
         const response = await axios.get(`http://localhost:3001/photographers`);
-        console.log("in CataPage", response.data);
         dispatch(handleUserData(response.data));
       } catch (error) {
         console.log(error);
@@ -46,22 +48,25 @@ const CategoryPage = () => {
           <SidebarFilter />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ height: "100vh",}}>
+        <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ height: "100vh" }}>
+          <SearchInput />
           {loading ? (
             <CircularProgress />
-          ) : userData.length === 0 ? (
-            <Typography>No photographers found.</Typography>
+          ) : displayData.length === 0 ? (
+            <Stack alignItems="center" justifyContent="center" sx={{ mt: 6 }}>
+              <SearchOffIcon color="disabled" sx={{ fontSize: 50 }} />
+              <Typography variant="h6" color="text.secondary" mt={2}>
+                No photographers found.
+              </Typography>
+            </Stack>
           ) : (
-            <>
-              <SearchInput />
-              <Grid container spacing={2} sx={{ p: 1 }}>
-                {userData.map((item) => (
-                  <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-                    <Cards data={item} />
-                  </Grid>
-                ))}
-              </Grid>
-            </>
+            <Grid container spacing={2} sx={{ p: 1 }}>
+              {displayData.map((item) => (
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
+                  <Cards data={item} />
+                </Grid>
+              ))}
+            </Grid>
           )}
         </Grid>
       </Grid>

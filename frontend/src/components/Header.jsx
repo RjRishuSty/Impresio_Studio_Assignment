@@ -15,8 +15,9 @@ const Header = () => {
       <Toolbar>
         <Logo />
         <Box>
-          {navLinks.map((item) => (
+          {navLinks.map((item,index) => (
             <Button
+            key={index}
               component={Link}
               to={item.path}
               sx={{

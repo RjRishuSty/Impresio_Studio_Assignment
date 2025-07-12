@@ -1,6 +1,5 @@
 import {
   Box,
-  Grid,
   Typography,
   Checkbox,
   FormGroup,
@@ -8,69 +7,61 @@ import {
   Slider,
   Rating,
 } from "@mui/material";
-import React, { useEffect, useMemo, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import DropDownInputs from "./DropDownInputs";
+import {
+  handleFilter,
+  handlePriceRange,
+  handleRating,
+  handleStyles,
+} from "../redux/slices/filterData.slice";
 
+//* Create for styles..............
 const stylesList = ["Traditional", "Candid", "Studio", "Outdoor"];
 const SidebarFilter = () => {
+  const dispatch = useDispatch();
   const userData = useSelector((state) => state.userData.data);
-  const [filtered, setFiltered] = useState([]);
-  const [selectedCity, setSelectedCity] = useState("");
-  const [selectedStyles, setSelectedStyles] = useState([]);
-  const [minRating, setMinRating] = useState(0);
-  const [priceRange, setPriceRange] = useState([0, 20000]);
-  const [sort, setSort] = useState("");
+  const { price, rating, styles } = useSelector((state) => state.filterData);
 
   useEffect(() => {
     let result = [...userData];
+    //! Filter Price Range .........
+    result = result.filter(
+      (item) => item.price >= price[0] && item.price <= price[1]
+    );
 
-    // Search
-    // if (searchTerm.trim()) {
-    //   const term = searchTerm.toLowerCase();
-    //   result = result.filter(
-    //     (p) =>
-    //       p.name.toLowerCase().includes(term) ||
-    //       p.location.toLowerCase().includes(term) ||
-    //       p.tags.join(" ").toLowerCase().includes(term)
-    //   );
-    // }
+    //! Rating Filter..............
+    result = result.filter((item) => item.rating >= rating);
 
-    // City
-    if (selectedCity) {
-      result = result.filter((p) => p.location === selectedCity);
-    }
-
-    // Styles
-    if (selectedStyles.length) {
-      result = result.filter((p) =>
-        selectedStyles.every((style) => p.styles.includes(style))
+    //! Styles Filter .............
+    if (styles.length > 0) {
+      result = result.filter((item) =>
+        styles.every((s) => item.styles.includes(s))
       );
     }
 
-    // Rating
-    result = result.filter((p) => p.rating >= minRating);
+     dispatch(handleFilter(result));
+  }, [price,rating,styles,userData,dispatch]);
 
-    // Price
-    result = result.filter(
-      (p) => p.price >= priceRange[0] && p.price <= priceRange[1]
-    );
+  console.log("Redux", price, rating, styles);
 
-    // Sort
-    if (sort === "priceAsc") result.sort((a, b) => a.price - b.price);
-    if (sort === "ratingDesc") result.sort((a, b) => b.rating - a.rating);
-    if (sort === "recent") result.sort((a, b) => b.id - a.id);
+  //* This handle work only styles change .................
+  const handleStyleChange = (style, checked) => {
+    const updatedStyles = checked
+      ? [...styles, style]
+      : styles.filter((s) => s !== style);
 
-    setFiltered(result);
-  }, [selectedCity, selectedStyles, minRating, priceRange, sort]);
+    dispatch(handleStyles(updatedStyles));
+  };
 
   return (
     <>
       <Box sx={{ mt: 3, mb: 1 }}>
         <Typography gutterBottom>Price Range</Typography>
         <Slider
-          value={priceRange}
-          onChange={(e, newVal) => setPriceRange(newVal)}
+          value={price}
+          onChange={(e, newVal) => dispatch(handlePriceRange(newVal))}
           valueLabelDisplay="auto"
           min={0}
           max={20000}
@@ -80,8 +71,8 @@ const SidebarFilter = () => {
         <Typography gutterBottom>Minimum Rating</Typography>
         <Rating
           precision={0.5}
-          value={minRating}
-          onChange={(e, val) => setMinRating(val || 0)}
+          value={rating}
+          onChange={(e, val) => dispatch(handleRating(val || 0))}
         />
       </Box>
 
@@ -93,16 +84,8 @@ const SidebarFilter = () => {
               key={style}
               control={
                 <Checkbox
-                  checked={selectedStyles.includes(style)}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setSelectedStyles([...selectedStyles, style]);
-                    } else {
-                      setSelectedStyles(
-                        selectedStyles.filter((s) => s !== style)
-                      );
-                    }
-                  }}
+                  checked={styles.includes(style)}
+                  onChange={(e) => handleStyleChange(style, e.target.checked)}
                 />
               }
               label={style}

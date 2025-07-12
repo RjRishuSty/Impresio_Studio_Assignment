@@ -61,8 +61,9 @@ const Cards = ({ data }) => {
           Starting Price: ₹{data.price}
         </Typography>
 
-        {data.tags.map((item) => (
+        {data.tags.map((item,index) => (
           <Chip
+          key={index}
             variant="body2"
             label={item}
             sx={{ mr: 1, fontWeight: "bold" }}

@@ -7,7 +7,17 @@ const PhotoGallery = ({ data }) => {
   console.log("photodata", data);
 
   return (
-    <ImageList sx={{ width: "100%", height: 400,display:'flex',justifyContent:'center',alignItems:'start' }} cols={2} rowHeight={164} >
+    <ImageList
+      sx={{
+        width: "100%",
+        height: 300,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "start",
+      }}
+      cols={2}
+      rowHeight={164}
+    >
       {data.map((item, index) => {
         return (
           <ImageListItem key={index}>

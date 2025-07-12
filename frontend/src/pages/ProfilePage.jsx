@@ -3,20 +3,16 @@ import {
   Box,
   Typography,
   Grid,
-  Card,
-  CardMedia,
   Rating,
   Button,
-  Modal,
-  TextField,
   Container,
-  Stack,
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import PhotoGallery from "../components/PhotoGallery";
 import { handleFilterUser } from "../redux/slices/userData.slice";
 import Slider from "../components/Slider";
+import InquiryModal from "../components/InquiryModal";
 
 const ProfilePage = () => {
   const { id } = useParams();
@@ -24,7 +20,6 @@ const ProfilePage = () => {
   const user = useSelector((state) => state.userData.filteredUser);
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const [formData, setFormData] = useState({ name: "", message: "" });
 
   useEffect(() => {
     if (userData && id) {
@@ -32,35 +27,23 @@ const ProfilePage = () => {
         (item) => Number(item.id) === Number(id)
       );
       dispatch(handleFilterUser(filterUser));
-      console.log("Filtered User:", filterUser);
     }
   }, [id, userData, dispatch]);
 
-  // const handleOpen = () => setOpenModal(true);
-  // const handleClose = () => setOpenModal(false);
-
-  // const handleFormChange = (e) =>
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  // const handleSubmit = () => {
-  //   console.log("Inquiry submitted", formData);
-  //   handleClose();
-  // };
+  const handleOpen = () => setOpenModal(true);
 
   if (!user) return <Typography> User Not Found</Typography>;
 
   return (
-    <Box sx={{ mt: 10 }}>
-      <Container sx={{ boxShadow: "0px 0px 5px #ccc", p: 5 }}>
+    <Box component="section" sx={{ mt: 5 }}>
+      <Container sx={{ py: 5 }}>
         <Grid container rowSpacing={3} columnSpacing={1}>
           <Grid
-            size={{ xs: 12, sm: 6, md: 5 }}
+            size={{ xs: 12, sm: 6, md: 4 }}
             sx={{
-              backgroundColor: "primary.main",
-              px: 4,
-              py: 2,
-              color: "#fff",
-              borderRadius: 2,
+              pl: 2,
+              pr: 2,
+              borderRight: "2px solid #ccc",
             }}
           >
             <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
@@ -87,84 +70,43 @@ const ProfilePage = () => {
               readOnly
               sx={{ mt: 1 }}
             />
+            <Box>
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3 }}
+                onClick={handleOpen}
+              >
+                Send Inquiry
+              </Button>
+            </Box>
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, md: 7 }}>
-            <Typography variant="h5" sx={{ textAlign: "center", mb: 4 }}>
-              Portfolio Gallery
-            </Typography>
+          <Grid
+            size={{ xs: 12, sm: 6, md: 8 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <PhotoGallery data={user.portfolio} />
           </Grid>
         </Grid>
       </Container>
 
-      <Stack sx={{border:'2px solid red',py:5,mt:5}}>
-      <Typography>Reviews</Typography>
-        <Slider data={user.reviews}/>
-      </Stack>
-
-      {/* <Typography variant="h6" sx={{ mt: 4 }}>
-        Reviews
-      </Typography>
-      <Box>
-        {photographer.reviews.map((rev, i) => (
-          <Box key={i} sx={{ mt: 2, borderBottom: "1px solid #ddd", pb: 1 }}>
-            <Typography fontWeight="bold">{rev.name}</Typography>
-            <Rating value={rev.rating} readOnly size="small" />
-            <Typography variant="body2" color="text.secondary">
-              {rev.date}
-            </Typography>
-            <Typography>{rev.comment}</Typography>
-          </Box>
-        ))}
-      </Box> */}
-
-      {/* Inquiry Button */}
-      {/* <Button variant="contained" sx={{ mt: 4 }} onClick={handleOpen}>
-        Send Inquiry
-      </Button> */}
-
-      {/* Inquiry Modal */}
-      {/* <Modal open={openModal} onClose={handleClose}>
-        <Box
-          sx={{
-            width: 400,
-            bgcolor: "background.paper",
-            p: 3,
-            mx: "auto",
-            mt: "10%",
-            borderRadius: 2,
-            boxShadow: 24,
-          }}
+      <Box sx={{ backgroundColor: "#f2f2f2", py: 5, mt: 7 }}>
+        <Typography
+          variant="h5"
+          gutterBottom
+          sx={{ textAlign: "center", mb: 2, fontWeight: "bold" }}
         >
-          <Typography variant="h6">Send Inquiry</Typography>
-          <TextField
-            fullWidth
-            name="name"
-            label="Your Name"
-            value={formData.name}
-            onChange={handleFormChange}
-            sx={{ mt: 2 }}
-          />
-          <TextField
-            fullWidth
-            name="message"
-            label="Message"
-            multiline
-            rows={4}
-            value={formData.message}
-            onChange={handleFormChange}
-            sx={{ mt: 2 }}
-          />
-          <Button
-            variant="contained"
-            onClick={handleSubmit}
-            fullWidth
-            sx={{ mt: 2 }}
-          >
-            Submit
-          </Button>
-        </Box>
-      </Modal> */}
+          What Our Clients Say
+        </Typography>
+        <Container maxWidth="sm">
+          <Slider data={user.reviews} />
+        </Container>
+      </Box>
+      <InquiryModal openModal={openModal} setOpenModal={setOpenModal} />
     </Box>
   );
 };

@@ -7,51 +7,29 @@ const Footer = () => {
       component="footer"
       sx={{
         width: "100%",
-        position: "absolute",
-        bottom: 0,
-        py: 3,
+        py: 5,
         px: 2,
         textAlign: "center",
-        backgroundColor: "#f5f5f5",
+        backgroundColor: 'primary.dark',
+        color:'#fff'
       }}
     >
-      <Divider sx={{ mb: 2 }} />
-
-      <Typography variant="body1" color="text.primary" gutterBottom>
+      <Typography variant="body1" gutterBottom>
         © {new Date().getFullYear()} Pixisphere. All rights reserved.
       </Typography>
 
-      <Typography variant="body2" color="text.secondary">
-        Built with ❤️ using React & MUI
+      <Typography variant="body2">
+        Built By{" "}
+        <Typography
+          variant="body2"
+          component="a"
+          target="_blank"
+          href="https://rishu-portfolio-three.vercel.app/"
+          sx={{color:'#fff'}}
+        >
+          @RishuRaj
+        </Typography>
       </Typography>
-
-      <Box sx={{ mt: 1 }}>
-        <Link
-          href="https://your-portfolio.com"
-          target="_blank"
-          rel="noopener"
-          underline="hover"
-          sx={{ mx: 1 }}
-        >
-          Portfolio
-        </Link>
-        <Link
-          href="https://github.com/yourusername"
-          target="_blank"
-          rel="noopener"
-          underline="hover"
-          sx={{ mx: 1 }}
-        >
-          GitHub
-        </Link>
-        <Link
-          href="mailto:your.email@example.com"
-          underline="hover"
-          sx={{ mx: 1 }}
-        >
-          Contact
-        </Link>
-      </Box>
     </Box>
   );
 };
