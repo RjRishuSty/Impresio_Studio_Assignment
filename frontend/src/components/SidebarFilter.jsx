@@ -6,6 +6,7 @@ import {
   FormControlLabel,
   Slider,
   Rating,
+  Button,
 } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,6 +16,7 @@ import {
   handlePriceRange,
   handleRating,
   handleStyles,
+  resetFilter,
 } from "../redux/slices/filterData.slice";
 
 //* Create for styles..............
@@ -22,27 +24,40 @@ const stylesList = ["Traditional", "Candid", "Studio", "Outdoor"];
 const SidebarFilter = () => {
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userData.data);
-  const { price, rating, styles } = useSelector((state) => state.filterData);
+  const { price, rating, styles,isActive } = useSelector((state) => state.filterData);
+console.log("active",isActive)
 
   useEffect(() => {
-    let result = [...userData];
-    //! Filter Price Range .........
-    result = result.filter(
-      (item) => item.price >= price[0] && item.price <= price[1]
-    );
+  let result = [...userData];
 
-    //! Rating Filter..............
-    result = result.filter((item) => item.rating >= rating);
+  const hasPriceChanged = price[0] !== 0 || price[1] !== 20000;
+  const hasRating = rating > 0;
+  const hasStyles = styles.length > 0;
 
-    //! Styles Filter .............
-    if (styles.length > 0) {
+  if (hasPriceChanged || hasRating || hasStyles) {
+    // apply filters
+    if (hasPriceChanged) {
+      result = result.filter(
+        (item) => item.price >= price[0] && item.price <= price[1]
+      );
+    }
+
+    if (hasRating) {
+      result = result.filter((item) => item.rating >= rating);
+    }
+
+    if (hasStyles) {
       result = result.filter((item) =>
         styles.every((s) => item.styles.includes(s))
       );
     }
 
-     dispatch(handleFilter(result));
-  }, [price,rating,styles,userData,dispatch]);
+    dispatch(handleFilter(result));
+  } else {
+    // if no filters are active, show all
+    dispatch(handleFilter(userData));
+  }
+}, [price, rating, styles, userData, dispatch]);
 
   //* This handle work only styles change .................
   const handleStyleChange = (style, checked) => {
@@ -93,6 +108,9 @@ const SidebarFilter = () => {
       </Box>
 
       <DropDownInputs />
+        {isActive && (
+          <Button fullWidth variant="contained" sx={{mt:3}} onClick={() => dispatch(resetFilter())}>Clear Filter</Button>
+        )}
     </>
   );
 };

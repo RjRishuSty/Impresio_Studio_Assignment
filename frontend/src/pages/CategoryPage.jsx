@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Typography, Stack } from "@mui/material";
+import { Grid, Typography, Stack, useMediaQuery } from "@mui/material";
 import SearchOffIcon from "@mui/icons-material/SearchOff";
 import axios from "axios";
 import Cards from "../components/Cards";
@@ -15,8 +15,11 @@ const CategoryPage = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const userData = useSelector((state) => state.userData.data);
-  const filterData = useSelector((state) => state.filterData.data);
-  const displayData = filterData.length > 0 ? filterData : userData;
+  const {data,isActive} = useSelector((state) => state.filterData);
+  const displayData = isActive ? data : userData;
+//*Style...
+   const isMinLaptop = useMediaQuery('(max-width:1339px)');
+  //  const isTablet = useMediaQuery('(max-width:700px)');
 
   //* Fecth Photographer User data ................
   useEffect(() => {
@@ -39,21 +42,21 @@ const CategoryPage = () => {
     <Stack component="section">
       <Grid container spacing={2}>
         <Grid
-          size={{ xs: 12, sm: 4, md: 3 }}
+          size={{ xs: 12, sm: 3, md: isMinLaptop?2:3 }}
           sx={{
             p: 2,
-            height: "100vh",
+            minHeight: "100vh",
             boxShadow: "5px 0px 5px -2px rgba(0,0,0,0.2)",
           }}
         >
           <SidebarFilter />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 8, md: 9 }} sx={{ height: "100vh" }}>
+        <Grid size={{ xs: 12, sm: 9, md: isMinLaptop?10: 9 }} sx={{ minHeight: "100vh" }}>
           <SearchInput />
           {loading ? (
-            <SkeletonLoader/>
-          ) : displayData.length === 0 ? (
+            <SkeletonLoader useIn='category'/>
+          ) :isActive&& displayData.length === 0 ? (
             <Stack alignItems="center" justifyContent="center" sx={{ mt: 6 }}>
               <SearchOffIcon color="disabled" sx={{ fontSize: 50 }} />
               <Typography variant="h6" color="text.secondary" mt={2}>
@@ -63,7 +66,7 @@ const CategoryPage = () => {
           ) : (
             <Grid container spacing={2} sx={{ p: 1 }}>
               {displayData.map((item) => (
-                <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
+                <Grid size={{ xs: 12, sm: 12, md: 4 }} key={item.id}>
                   <Cards data={item} />
                 </Grid>
               ))}

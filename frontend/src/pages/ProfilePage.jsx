@@ -10,12 +10,12 @@ import {
 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import PhotoGallery from "../components/PhotoGallery";
 import { handleFilterUser } from "../redux/slices/userData.slice";
 import Slider from "../components/Slider";
 import InquiryModal from "../components/InquiryModal";
 import axios from "axios";
 import PersonIcon from "@mui/icons-material/Person";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const ProfilePage = () => {
   const { id } = useParams();
@@ -41,19 +41,19 @@ const ProfilePage = () => {
     };
     fetchUser();
   }, [id]);
-  console.log(user,"ac")
+  console.log(user, "ac");
 
   const handleOpen = () => setOpenModal(true);
 
   return (
     <>
       {loading ? (
-        ""
+        <SkeletonLoader useIn="profile" />
       ) : user === null ? (
         <Stack alignItems="center" justifyContent="center" sx={{ mt: 6 }}>
           <PersonIcon color="disabled" sx={{ fontSize: 50 }} />
           <Typography variant="h6" color="text.secondary" mt={2}>
-             Oops, Photographer details not found.
+            Oops, Photographer details not found.
           </Typography>
         </Stack>
       ) : (
@@ -61,10 +61,10 @@ const ProfilePage = () => {
           <Container sx={{ py: 5 }}>
             <Grid container rowSpacing={3} columnSpacing={1}>
               <Grid
-                size={{ xs: 12, sm: 6, md: 4 }}
+                size={{ xs: 12, sm: 6, md: 5 }}
                 sx={{
                   pl: 2,
-                  pr: 2,
+                  pr: 2.5,
                   borderRight: "2px solid #ccc",
                 }}
               >
@@ -110,14 +110,15 @@ const ProfilePage = () => {
                 </Box>
               </Grid>
               <Grid
-                size={{ xs: 12, sm: 6, md: 8 }}
+                size={{ xs: 12, sm: 6, md: 7 }}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
-                <PhotoGallery data={user.portfolio} />
+                {/* <PhotoGallery data={user.portfolio} /> */}
+                <Slider data={user.portfolio} useIn="showImg" />
               </Grid>
             </Grid>
           </Container>
@@ -130,8 +131,8 @@ const ProfilePage = () => {
             >
               What Our Clients Say
             </Typography>
-            <Container maxWidth="sm">
-              <Slider data={user.reviews} />
+            <Container maxWidth="md">
+              <Slider data={user.reviews} useIn="rating" />
             </Container>
           </Box>
           <InquiryModal openModal={openModal} setOpenModal={setOpenModal} />
