@@ -8,7 +8,7 @@ import { handleUserData } from "../redux/slices/userData.slice";
 import { useDispatch, useSelector } from "react-redux";
 import SearchInput from "../components/SearchInput";
 import SkeletonLoader from "../components/SkeletonLoader";
-import MobileFilter from "../components/mobilefilter";
+import MobileFilter from "../components/Mobilefilter";
 import { handleGetHeading } from "../redux/slices/filterData.slice";
 
 const CategoryPage = () => {
