@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isActive:false,
+  isActive: false,
   search: "", //* search text
-  price: [0,20000],
+  price: [0, 20000],
   rating: 0,
   city: "",
   styles: [],
   sortBy: "",
   data: [], //* filter data
+  heading: "",
 };
 
 const filterDataSlice = createSlice({
@@ -33,7 +34,10 @@ const filterDataSlice = createSlice({
     },
     handleSort: (state, action) => {
       state.sortBy = action.payload;
-      
+    },
+    handleGetHeading: (state, action) => {
+      const { name, location } = action.payload;
+      state.heading = `${name} is in ${location}`;
     },
 
     handleFilter: (state, action) => {
@@ -48,7 +52,7 @@ const filterDataSlice = createSlice({
         state.city !== "" ||
         state.sortBy !== "";
 
-      state.isActive = isAnyFilterApplied && hasFilterResult;
+      state.isActive = isAnyFilterApplied || hasFilterResult;
     },
     resetFilter: (state) => {
       state.isActive = false;
@@ -59,9 +63,19 @@ const filterDataSlice = createSlice({
       state.styles = [];
       state.sortBy = "";
       state.data = [];
-    }
+    },
   },
 });
 
-export const {resetFilter, handleSearch, handleFilter,handleCity,handlePriceRange,handleRating,handleStyles,handleSort } = filterDataSlice.actions;
+export const {
+  resetFilter,
+  handleSearch,
+  handleFilter,
+  handleCity,
+  handlePriceRange,
+  handleRating,
+  handleStyles,
+  handleSort,
+  handleGetHeading
+} = filterDataSlice.actions;
 export default filterDataSlice.reducer;

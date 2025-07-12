@@ -10,7 +10,7 @@ const SearchInput = () => {
   const isTablet = useMediaQuery("(max-width:900px)");
 
   const handleSearchFilter = useCallback(() => {
-    const query = searchText.toLowerCase();
+    const query = searchText.trim().toLowerCase();
     const result = userData.filter(
       (item) =>
         item.name.toLowerCase().includes(query) ||

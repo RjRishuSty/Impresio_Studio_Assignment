@@ -52,7 +52,7 @@ const DropDownInputs = () => {
     },
   ];
   return (
-    <Grid container sx={{ mt: 4 }}>
+    <Grid container sx={{ mt: 2 }}>
       {fields.map((item, index) => (
         <Grid size={{ xs: 12, sm: 12, md: 12 }} key={index}>
           <FormControl fullWidth sx={{ mt: 2 }}>

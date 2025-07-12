@@ -7,6 +7,7 @@ import {
   Slider,
   Rating,
   Button,
+  useMediaQuery,
 } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,11 +22,12 @@ import {
 
 //* Create for styles..............
 const stylesList = ["Traditional", "Candid", "Studio", "Outdoor"];
+
 const SidebarFilter = () => {
+  const isMobile = useMediaQuery('(max-width:600px)');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userData.data);
-  const { price, rating, styles,isActive } = useSelector((state) => state.filterData);
-console.log("active",isActive)
+  const {data, price, rating, styles,isActive, search} = useSelector((state) => state.filterData);
 
   useEffect(() => {
   let result = [...userData];
@@ -53,12 +55,10 @@ console.log("active",isActive)
     }
 
     dispatch(handleFilter(result));
-  } else {
-    // if no filters are active, show all
-    dispatch(handleFilter(userData));
-  }
+  } 
 }, [price, rating, styles, userData, dispatch]);
 
+console.log(data,"result")
   //* This handle work only styles change .................
   const handleStyleChange = (style, checked) => {
     const updatedStyles = checked
@@ -68,8 +68,12 @@ console.log("active",isActive)
     dispatch(handleStyles(updatedStyles));
   };
 
+
   return (
     <>
+    {isActive && !isMobile &&!search  && (
+          <Button fullWidth variant="contained" sx={{mt:3}} onClick={() => dispatch(resetFilter())}>Clear Filter</Button>
+        )}
       <Box sx={{ mt: 3, mb: 1 }}>
         <Typography gutterBottom>Price Range</Typography>
         <Slider
@@ -108,9 +112,7 @@ console.log("active",isActive)
       </Box>
 
       <DropDownInputs />
-        {isActive && (
-          <Button fullWidth variant="contained" sx={{mt:3}} onClick={() => dispatch(resetFilter())}>Clear Filter</Button>
-        )}
+        
     </>
   );
 };

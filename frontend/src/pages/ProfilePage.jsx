@@ -59,13 +59,14 @@ const ProfilePage = () => {
       ) : (
         <Box component="section" sx={{ mt: 5 }}>
           <Container sx={{ py: 5 }}>
-            <Grid container rowSpacing={3} columnSpacing={1}>
+            <Grid container rowSpacing={5} columnSpacing={1}>
               <Grid
-                size={{ xs: 12, sm: 6, md: 5 }}
+                size={{ xs: 12, sm: 12, md: 5 }}
                 sx={{
                   pl: 2,
                   pr: 2.5,
-                  borderRight: "2px solid #ccc",
+                  borderRight: {sm:"",md:"2px solid #ccc"},
+                  order:{xs:2,sm:2,md:1}
                 }}
               >
                 <Typography
@@ -110,14 +111,14 @@ const ProfilePage = () => {
                 </Box>
               </Grid>
               <Grid
-                size={{ xs: 12, sm: 6, md: 7 }}
+                size={{ xs: 12, sm: 12, md: 7 }}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  order:{xs:1,sm:1,md:2},
                 }}
               >
-                {/* <PhotoGallery data={user.portfolio} /> */}
                 <Slider data={user.portfolio} useIn="showImg" />
               </Grid>
             </Grid>

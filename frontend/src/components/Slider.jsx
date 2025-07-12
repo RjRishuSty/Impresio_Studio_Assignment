@@ -19,7 +19,7 @@ const Slider = ({ data, useIn }) => {
               alignItems: "center",
             }}
           >
-            <Box sx={{ width: "80%", py: 3 }}>
+            <Box sx={{ width:{xs:'100%',sm:'100%',md: "80%"}, py: 3 }}>
               <Card
                 sx={{
                   width: "100%",
@@ -65,11 +65,11 @@ const Slider = ({ data, useIn }) => {
                 component="img"
                 src={item}
                 sx={{
-                  width: "550px",
+                  width: { sm: "100%", md: "550px" },
                   height: "350px",
                   objectFit: "cover",
                   objectPosition: "center",
-                  borderRadius: 5,
+                  borderRadius: { sm: 1, md: 5 },
                   filter: "brightness(90%)",
                   transition: "transform 0.3s ease, filter 0.3s ease",
                   "&:hover": {
@@ -92,7 +92,7 @@ const Slider = ({ data, useIn }) => {
       modules={[Navigation]}
       navigation={true}
       slidesPerView={1}
-      spaceBetween={0}
+      spaceBetween={150}
     >
       {handleRender()}
     </Swiper>
