@@ -22,7 +22,7 @@ const CategoryPage = () => {
     const fetchPhotographersData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3001/photographers`);
+        const response = await axios.get(`https://pixisphere-api-b4dq.onrender.com/photographers`);
         dispatch(handleUserData(response.data));
       } catch (error) {
         console.log(error);

@@ -9,8 +9,13 @@
       "styles": ["Outdoor", "Studio"],
       "tags": ["Candid", "Maternity"],
       "bio": "Award-winning studio specializing in maternity and newborn shoots.",
-      "profilePic": "https://www.freepik.com/free-photo/young-bearded-man-with-striped-shirt_9660042.htm#fromView=keyword&page=1&position=0&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
-      "portfolio": ["https://www.freepik.com/free-ai-image/cute-deer-winter-forest-close-up-portrait-generated-by-ai_41473114.htm#fromView=search&page=1&position=3&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal", "https://www.freepik.com/free-photo/parrot-profile_921786.htm#fromView=search&page=1&position=8&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal","https://www.freepik.com/free-photo/red-deer-nature-habitat-deer-rut-european-wildlife_16755900.htm#fromView=search&page=1&position=9&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal","https://www.freepik.com/free-photo/amazing-bengal-tiger-nature_18519868.htm#fromView=search&page=1&position=14&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal"],
+      "profilePic": "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+      "portfolio": [
+        "https://www.freepik.com/free-ai-image/cute-deer-winter-forest-close-up-portrait-generated-by-ai_41473114.htm#fromView=search&page=1&position=3&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal",
+        "https://www.freepik.com/free-photo/parrot-profile_921786.htm#fromView=search&page=1&position=8&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal",
+        "https://www.freepik.com/free-photo/red-deer-nature-habitat-deer-rut-european-wildlife_16755900.htm#fromView=search&page=1&position=9&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal",
+        "https://www.freepik.com/free-photo/amazing-bengal-tiger-nature_18519868.htm#fromView=search&page=1&position=14&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal"
+      ],
       "reviews": [
         {
           "name": "Ananya",
@@ -41,7 +46,7 @@
       "styles": ["Candid", "Indoor"],
       "tags": ["Newborn", "Birthday"],
       "bio": "Delhi-based candid specialist for kids and birthday parties.",
-      "profilePic": "https://www.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_11139896.htm#fromView=keyword&page=1&position=2&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
+      "profilePic": "https://static.vecteezy.com/system/resources/thumbnails/040/284/648/small_2x/ai-generated-a-cheerful-young-man-with-slicked-back-hair-smiles-in-a-teal-t-shirt-presenting-a-fresh-and-clean-casual-look-photo.jpeg",
       "portfolio": [
         "https://www.freepik.com/free-photo/deer-lying-pasture_1234641.htm#fromView=search&page=1&position=1&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal",
         "https://www.freepik.com/free-photo/cute-massai-giraffe-tsavo-east-national-park-kenya-africa_12045843.htm#fromView=search&page=1&position=3&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal",
@@ -78,8 +83,13 @@
       "styles": ["Studio", "Outdoor", "Traditional"],
       "tags": ["Wedding", "Pre-wedding"],
       "bio": "Capturing timeless wedding stories across India.",
-      "profilePic": "https://www.freepik.com/free-photo/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded_6515452.htm#fromView=keyword&page=1&position=6&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
-      "portfolio": ["https://www.freepik.com/free-photo/road-with-beautiful-landscape_897322.htm#fromView=search&page=1&position=4&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road", "https://www.freepik.com/free-photo/road_1242912.htm#fromView=search&page=1&position=6&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road","https://www.freepik.com/free-photo/beautiful-road_1242675.htm#fromView=search&page=1&position=16&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road","https://www.freepik.com/free-photo/beautiful-view-road-surrounded-by-trees_15750267.htm#fromView=search&page=1&position=27&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road"],
+      "profilePic": "https://img.freepik.com/premium-photo/portrait-satisfied-businessman-gray-suit-glasses_1258-33513.jpg?semt=ais_hybrid&w=740",
+      "portfolio": [
+        "https://www.freepik.com/free-photo/road-with-beautiful-landscape_897322.htm#fromView=search&page=1&position=4&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road",
+        "https://www.freepik.com/free-photo/road_1242912.htm#fromView=search&page=1&position=6&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road",
+        "https://www.freepik.com/free-photo/beautiful-road_1242675.htm#fromView=search&page=1&position=16&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road",
+        "https://www.freepik.com/free-photo/beautiful-view-road-surrounded-by-trees_15750267.htm#fromView=search&page=1&position=27&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road"
+      ],
       "reviews": [
         {
           "name": "Rahul",
@@ -110,8 +120,13 @@
       "styles": ["Outdoor", "Candid"],
       "tags": ["Maternity", "Couple"],
       "bio": "Natural light specialist focusing on emotional storytelling.",
-      "profilePic": "https://www.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_9117255.htm#fromView=search&page=1&position=1&uuid=20d64a98-1c26-4162-b905-df847f99e148&query=woman",
-      "portfolio": ["https://www.freepik.com/free-photo/beautiful-young-woman-wearing-sari_29016406.htm#fromView=search&page=1&position=2&uuid=b66c498a-8bf1-4542-a406-ed61a114d1d0&query=sadi", "https://www.freepik.com/free-photo/indian-hindu-girl-traditional-violet-saree-posed-street-against-wooden-terrace_25957595.htm#fromView=search&page=1&position=19&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri","https://www.freepik.com/free-photo/people-lifestyle-nature-joy-rest-relaxation-concept-happy-emotional-young-european-female-romantic-striped-dress-having-fun-wild-nature-smiling-broadly-touching-her-dark-hair_10897606.htm#fromView=search&page=1&position=35&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri","https://www.freepik.com/free-photo/woman-doing-peace-victory-hand-sign-gesture-studio-backdrop_273418456.htm#fromView=search&page=1&position=31&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri"],
+      "profilePic": "https://t4.ftcdn.net/jpg/04/28/23/33/360_F_428233341_bt0IoWMEvgpu3Zir5zyXQ9KUGy7E64LX.jpg",
+      "portfolio": [
+        "https://www.freepik.com/free-photo/beautiful-young-woman-wearing-sari_29016406.htm#fromView=search&page=1&position=2&uuid=b66c498a-8bf1-4542-a406-ed61a114d1d0&query=sadi",
+        "https://www.freepik.com/free-photo/indian-hindu-girl-traditional-violet-saree-posed-street-against-wooden-terrace_25957595.htm#fromView=search&page=1&position=19&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri",
+        "https://www.freepik.com/free-photo/people-lifestyle-nature-joy-rest-relaxation-concept-happy-emotional-young-european-female-romantic-striped-dress-having-fun-wild-nature-smiling-broadly-touching-her-dark-hair_10897606.htm#fromView=search&page=1&position=35&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri",
+        "https://www.freepik.com/free-photo/woman-doing-peace-victory-hand-sign-gesture-studio-backdrop_273418456.htm#fromView=search&page=1&position=31&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri"
+      ],
       "reviews": [
         {
           "name": "Sneha",
@@ -142,7 +157,7 @@
       "styles": ["Studio"],
       "tags": ["Birthday", "Family"],
       "bio": "Affordable indoor shoots with creative themes.",
-      "profilePic": "https://www.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_7500650.htm#fromView=search&page=1&position=10&uuid=20d64a98-1c26-4162-b905-df847f99e148&query=woman",
+      "profilePic": "https://img.freepik.com/free-photo/beautiful-woman-walking-spring-park_1157-21357.jpg?semt=ais_hybrid&w=740",
       "portfolio": [
         "https://www.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1251787.htm#fromView=search&page=1&position=3&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+",
         "https://www.freepik.com/free-photo/footpath-beautiful-arch-flowers-plants_10477479.htm#fromView=search&page=1&position=11&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+",
