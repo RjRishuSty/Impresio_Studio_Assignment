@@ -1,0 +1,168 @@
+{
+  "photographers": [
+    {
+      "id": 1,
+      "name": "Ravi Studio",
+      "location": "Bengaluru",
+      "price": 10000,
+      "rating": 4.6,
+      "styles": ["Outdoor", "Studio"],
+      "tags": ["Candid", "Maternity"],
+      "bio": "Award-winning studio specializing in maternity and newborn shoots.",
+      "profilePic": "https://www.freepik.com/free-photo/young-bearded-man-with-striped-shirt_9660042.htm#fromView=keyword&page=1&position=0&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
+      "portfolio": ["https://www.freepik.com/free-ai-image/cute-deer-winter-forest-close-up-portrait-generated-by-ai_41473114.htm#fromView=search&page=1&position=3&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal", "https://www.freepik.com/free-photo/parrot-profile_921786.htm#fromView=search&page=1&position=8&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal","https://www.freepik.com/free-photo/red-deer-nature-habitat-deer-rut-european-wildlife_16755900.htm#fromView=search&page=1&position=9&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal","https://www.freepik.com/free-photo/amazing-bengal-tiger-nature_18519868.htm#fromView=search&page=1&position=14&uuid=92a25558-8d82-4cc3-8b87-50dcadacf017&query=animal"],
+      "reviews": [
+        {
+          "name": "Ananya",
+          "rating": 5,
+          "comment": "Truly amazing photos and experience!",
+          "date": "2024-12-15"
+        },
+        {
+          "name": "Rahul Verma",
+          "rating": 4.6,
+          "comment": "Flexible, punctual, and super friendly.",
+          "date": "2025-05-03"
+        },
+        {
+          "name": "Tanvi Kapoor",
+          "rating": 3.9,
+          "comment": "Some shots were overexposed, but overall good.",
+          "date": "2025-06-18"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lens Queen Photography",
+      "location": "Delhi",
+      "price": 15000,
+      "rating": 4.2,
+      "styles": ["Candid", "Indoor"],
+      "tags": ["Newborn", "Birthday"],
+      "bio": "Delhi-based candid specialist for kids and birthday parties.",
+      "profilePic": "https://www.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_11139896.htm#fromView=keyword&page=1&position=2&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
+      "portfolio": [
+        "https://www.freepik.com/free-photo/deer-lying-pasture_1234641.htm#fromView=search&page=1&position=1&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal",
+        "https://www.freepik.com/free-photo/cute-massai-giraffe-tsavo-east-national-park-kenya-africa_12045843.htm#fromView=search&page=1&position=3&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal",
+        "https://www.freepik.com/free-ai-image/wild-deer-nature_186590006.htm#fromView=search&page=1&position=4&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal",
+        "https://www.freepik.com/premium-photo/lizard-field_115621641.htm#fromView=search&page=1&position=6&uuid=42f69101-3f96-43c4-9e88-447563bb7b56&query=nature+with+wild+animal"
+      ],
+      "reviews": [
+        {
+          "name": "Priya",
+          "rating": 4,
+          "comment": "Very professional and punctual!",
+          "date": "2024-10-01"
+        },
+        {
+          "name": "Deepak Joshi",
+          "rating": 5.0,
+          "comment": "Best photography team I've hired so far!",
+          "date": "2025-03-20"
+        },
+        {
+          "name": "Shruti Bansal",
+          "rating": 4.2,
+          "comment": "Creative angles and natural lighting use.",
+          "date": "2025-04-08"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Click Factory",
+      "location": "Mumbai",
+      "price": 8000,
+      "rating": 4.8,
+      "styles": ["Studio", "Outdoor", "Traditional"],
+      "tags": ["Wedding", "Pre-wedding"],
+      "bio": "Capturing timeless wedding stories across India.",
+      "profilePic": "https://www.freepik.com/free-photo/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded_6515452.htm#fromView=keyword&page=1&position=6&uuid=23558ed2-3783-4425-b63a-d7023c9e0279&query=Man",
+      "portfolio": ["https://www.freepik.com/free-photo/road-with-beautiful-landscape_897322.htm#fromView=search&page=1&position=4&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road", "https://www.freepik.com/free-photo/road_1242912.htm#fromView=search&page=1&position=6&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road","https://www.freepik.com/free-photo/beautiful-road_1242675.htm#fromView=search&page=1&position=16&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road","https://www.freepik.com/free-photo/beautiful-view-road-surrounded-by-trees_15750267.htm#fromView=search&page=1&position=27&uuid=1781f502-f338-4809-974a-fddee4bb3d86&query=vical+with+road"],
+      "reviews": [
+        {
+          "name": "Rahul",
+          "rating": 5,
+          "comment": "We loved every single moment they captured.",
+          "date": "2025-01-22"
+        },
+        {
+          "name": "Amit Rathi",
+          "rating": 4.8,
+          "comment": "Quick turnaround and excellent quality.",
+          "date": "2025-01-15"
+        },
+        {
+          "name": "Pooja Singh",
+          "rating": 3.0,
+          "comment": "Photos were good, but service was slow.",
+          "date": "2025-02-10"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Moments by Neha",
+      "location": "Bengaluru",
+      "price": 12000,
+      "rating": 4.3,
+      "styles": ["Outdoor", "Candid"],
+      "tags": ["Maternity", "Couple"],
+      "bio": "Natural light specialist focusing on emotional storytelling.",
+      "profilePic": "https://www.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_9117255.htm#fromView=search&page=1&position=1&uuid=20d64a98-1c26-4162-b905-df847f99e148&query=woman",
+      "portfolio": ["https://www.freepik.com/free-photo/beautiful-young-woman-wearing-sari_29016406.htm#fromView=search&page=1&position=2&uuid=b66c498a-8bf1-4542-a406-ed61a114d1d0&query=sadi", "https://www.freepik.com/free-photo/indian-hindu-girl-traditional-violet-saree-posed-street-against-wooden-terrace_25957595.htm#fromView=search&page=1&position=19&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri","https://www.freepik.com/free-photo/people-lifestyle-nature-joy-rest-relaxation-concept-happy-emotional-young-european-female-romantic-striped-dress-having-fun-wild-nature-smiling-broadly-touching-her-dark-hair_10897606.htm#fromView=search&page=1&position=35&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri","https://www.freepik.com/free-photo/woman-doing-peace-victory-hand-sign-gesture-studio-backdrop_273418456.htm#fromView=search&page=1&position=31&uuid=a68ef6e5-c25f-44f7-8085-23b2058a96ff&query=indian+modal+women+with+sarri"],
+      "reviews": [
+        {
+          "name": "Sneha",
+          "rating": 4.5,
+          "comment": "Captured our maternity journey so beautifully.",
+          "date": "2024-11-05"
+        },
+        {
+          "name": "Neha Sharma",
+          "rating": 5.0,
+          "comment": "Amazing photos! Loved the edits and candids.",
+          "date": "2024-11-12"
+        },
+        {
+          "name": "Anjali Mehra",
+          "rating": 4.0,
+          "comment": "Very professional, but slightly pricey.",
+          "date": "2024-12-01"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Snapshot Studio",
+      "location": "Hyderabad",
+      "price": 7000,
+      "rating": 3.9,
+      "styles": ["Studio"],
+      "tags": ["Birthday", "Family"],
+      "bio": "Affordable indoor shoots with creative themes.",
+      "profilePic": "https://www.freepik.com/free-photo/smiling-beautiful-young-woman-standing-posing_7500650.htm#fromView=search&page=1&position=10&uuid=20d64a98-1c26-4162-b905-df847f99e148&query=woman",
+      "portfolio": [
+        "https://www.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1251787.htm#fromView=search&page=1&position=3&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+",
+        "https://www.freepik.com/free-photo/footpath-beautiful-arch-flowers-plants_10477479.htm#fromView=search&page=1&position=11&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+",
+        "https://www.freepik.com/free-photo/sunrise-bali-jungle_1203692.htm#fromView=search&page=1&position=27&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+",
+        "https://www.freepik.com/free-ai-image/hidden-waterfall-paradise_415907383.htm#fromView=search&page=1&position=40&uuid=5a271f32-3840-4e84-84ad-ab6fed8066c2&query=nature+"
+      ],
+      "reviews": [
+        {
+          "name": "Vikram",
+          "rating": 3.5,
+          "comment": "Decent service, could improve on punctuality.",
+          "date": "2024-09-10"
+        },
+        {
+          "name": "Ram Kumar",
+          "rating": 4.5,
+          "comment": "Great experience! Would book again.",
+          "date": "2024-10-05"
+        }
+      ]
+    }
+  ]
+}
