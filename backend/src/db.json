@@ -173,6 +173,354 @@
           "date": "2024-10-05"
         }
       ]
+    },
+    {
+      "id": 1,
+      "name": "Ravi Studio",
+      "location": "Bengaluru",
+      "price": 10000,
+      "rating": 4.6,
+      "styles": ["Outdoor", "Studio"],
+      "tags": ["Candid", "Maternity"],
+      "bio": "Award-winning studio specializing in maternity and newborn shoots.",
+      "profilePic": "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+      "portfolio": [
+        "https://www.tigersafariindia.com/blog/wp-content/uploads/2024/10/Asian-elephant.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce2c1947070300001d15bef/0539e58f-5456-4861-b9b6-c190b188d2f4/Indian+elephant.jpg",
+        "https://www.worldanimalprotection.us/cdn-cgi/image/width=800,format=auto,fit=cover/siteassets/article/gettyimages-1243182801.jpg",
+        "https://cdn.creazilla.com/photos/413293/horns-wild-animal-zoo-photo-lg.jpeg"
+      ],
+      "reviews": [
+        {
+          "name": "Ananya",
+          "rating": 5,
+          "comment": "Truly amazing photos and experience!",
+          "date": "2024-12-15"
+        },
+        {
+          "name": "Rahul Verma",
+          "rating": 4.6,
+          "comment": "Flexible, punctual, and super friendly.",
+          "date": "2025-05-03"
+        },
+        {
+          "name": "Tanvi Kapoor",
+          "rating": 3.9,
+          "comment": "Some shots were overexposed, but overall good.",
+          "date": "2025-06-18"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lens Queen Photography",
+      "location": "Delhi",
+      "price": 15000,
+      "rating": 4.2,
+      "styles": ["Candid", "Indoor"],
+      "tags": ["Newborn", "Birthday"],
+      "bio": "Delhi-based candid specialist for kids and birthday parties.",
+      "profilePic": "https://static.vecteezy.com/system/resources/thumbnails/040/284/648/small_2x/ai-generated-a-cheerful-young-man-with-slicked-back-hair-smiles-in-a-teal-t-shirt-presenting-a-fresh-and-clean-casual-look-photo.jpeg",
+      "portfolio": [
+        "https://www.shutterstock.com/image-photo/domestic-animal-closeup-portrait-cute-600nw-2492074035.jpg",
+        "https://www.housedigest.com/img/gallery/the-real-reason-you-should-keep-dogs-off-your-couch/l-intro-1623080221.jpg",
+        "https://animalhospitaladel.com/wp-content/uploads/2024/03/2-1080x675.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Priya",
+          "rating": 4,
+          "comment": "Very professional and punctual!",
+          "date": "2024-10-01"
+        },
+        {
+          "name": "Deepak Joshi",
+          "rating": 5.0,
+          "comment": "Best photography team I've hired so far!",
+          "date": "2025-03-20"
+        },
+        {
+          "name": "Shruti Bansal",
+          "rating": 4.2,
+          "comment": "Creative angles and natural lighting use.",
+          "date": "2025-04-08"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Click Factory",
+      "location": "Mumbai",
+      "price": 8000,
+      "rating": 4.8,
+      "styles": ["Studio", "Outdoor", "Traditional"],
+      "tags": ["Wedding", "Pre-wedding"],
+      "bio": "Capturing timeless wedding stories across India.",
+      "profilePic": "https://img.freepik.com/premium-photo/portrait-satisfied-businessman-gray-suit-glasses_1258-33513.jpg?semt=ais_hybrid&w=740",
+      "portfolio": [
+        "https://i.pinimg.com/736x/f8/ec/30/f8ec30fdb8af4093b8d35c24fabd0523.jpg",
+        "https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Sumangali-Jewellery-Collection-o1.jpg",
+        "https://i.ebayimg.com/images/g/emUAAOSwpstjYhV9/s-l1200.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Rahul",
+          "rating": 5,
+          "comment": "We loved every single moment they captured.",
+          "date": "2025-01-22"
+        },
+        {
+          "name": "Amit Rathi",
+          "rating": 4.8,
+          "comment": "Quick turnaround and excellent quality.",
+          "date": "2025-01-15"
+        },
+        {
+          "name": "Pooja Singh",
+          "rating": 3.0,
+          "comment": "Photos were good, but service was slow.",
+          "date": "2025-02-10"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Moments by Neha",
+      "location": "Bengaluru",
+      "price": 12000,
+      "rating": 4.3,
+      "styles": ["Outdoor", "Candid"],
+      "tags": ["Maternity", "Couple"],
+      "bio": "Natural light specialist focusing on emotional storytelling.",
+      "profilePic": "https://t4.ftcdn.net/jpg/04/28/23/33/360_F_428233341_bt0IoWMEvgpu3Zir5zyXQ9KUGy7E64LX.jpg",
+      "portfolio": [
+        "https://thumbs.dreamstime.com/b/modern-one-storey-private-houses-russia-house-outside-fence-118970895.jpg",
+        "https://as1.ftcdn.net/jpg/01/67/77/50/1000_F_167775028_au9cnBM83kBM2ZWfjTHuMFfaT5e2Nt7o.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Sneha",
+          "rating": 4.5,
+          "comment": "Captured our maternity journey so beautifully.",
+          "date": "2024-11-05"
+        },
+        {
+          "name": "Neha Sharma",
+          "rating": 5.0,
+          "comment": "Amazing photos! Loved the edits and candids.",
+          "date": "2024-11-12"
+        },
+        {
+          "name": "Anjali Mehra",
+          "rating": 4.0,
+          "comment": "Very professional, but slightly pricey.",
+          "date": "2024-12-01"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Snapshot Studio",
+      "location": "Hyderabad",
+      "price": 7000,
+      "rating": 3.9,
+      "styles": ["Studio"],
+      "tags": ["Birthday", "Family"],
+      "bio": "Affordable indoor shoots with creative themes.",
+      "profilePic": "https://img.freepik.com/free-photo/beautiful-woman-walking-spring-park_1157-21357.jpg?semt=ais_hybrid&w=740",
+      "portfolio": [
+        "https://images.unsplash.com/photo-1486365227551-f3f90034a57c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://www.theweek.in/content/dam/week/news/sci-tech/images/2022/4/5/macaw-bird.jpg.transform/schema-4x3/image.jpg",
+        "https://cdn.pixabay.com/photo/2017/11/02/00/34/parrot-2909828_1280.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Vikram",
+          "rating": 3.5,
+          "comment": "Decent service, could improve on punctuality.",
+          "date": "2024-09-10"
+        },
+        {
+          "name": "Ram Kumar",
+          "rating": 4.5,
+          "comment": "Great experience! Would book again.",
+          "date": "2024-10-05"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Ravi Studio",
+      "location": "Bengaluru",
+      "price": 10000,
+      "rating": 4.6,
+      "styles": ["Outdoor", "Studio"],
+      "tags": ["Candid", "Maternity"],
+      "bio": "Award-winning studio specializing in maternity and newborn shoots.",
+      "profilePic": "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+      "portfolio": [
+        "https://www.tigersafariindia.com/blog/wp-content/uploads/2024/10/Asian-elephant.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce2c1947070300001d15bef/0539e58f-5456-4861-b9b6-c190b188d2f4/Indian+elephant.jpg",
+        "https://www.worldanimalprotection.us/cdn-cgi/image/width=800,format=auto,fit=cover/siteassets/article/gettyimages-1243182801.jpg",
+        "https://cdn.creazilla.com/photos/413293/horns-wild-animal-zoo-photo-lg.jpeg"
+      ],
+      "reviews": [
+        {
+          "name": "Ananya",
+          "rating": 5,
+          "comment": "Truly amazing photos and experience!",
+          "date": "2024-12-15"
+        },
+        {
+          "name": "Rahul Verma",
+          "rating": 4.6,
+          "comment": "Flexible, punctual, and super friendly.",
+          "date": "2025-05-03"
+        },
+        {
+          "name": "Tanvi Kapoor",
+          "rating": 3.9,
+          "comment": "Some shots were overexposed, but overall good.",
+          "date": "2025-06-18"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lens Queen Photography",
+      "location": "Delhi",
+      "price": 15000,
+      "rating": 4.2,
+      "styles": ["Candid", "Indoor"],
+      "tags": ["Newborn", "Birthday"],
+      "bio": "Delhi-based candid specialist for kids and birthday parties.",
+      "profilePic": "https://static.vecteezy.com/system/resources/thumbnails/040/284/648/small_2x/ai-generated-a-cheerful-young-man-with-slicked-back-hair-smiles-in-a-teal-t-shirt-presenting-a-fresh-and-clean-casual-look-photo.jpeg",
+      "portfolio": [
+        "https://www.shutterstock.com/image-photo/domestic-animal-closeup-portrait-cute-600nw-2492074035.jpg",
+        "https://www.housedigest.com/img/gallery/the-real-reason-you-should-keep-dogs-off-your-couch/l-intro-1623080221.jpg",
+        "https://animalhospitaladel.com/wp-content/uploads/2024/03/2-1080x675.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Priya",
+          "rating": 4,
+          "comment": "Very professional and punctual!",
+          "date": "2024-10-01"
+        },
+        {
+          "name": "Deepak Joshi",
+          "rating": 5.0,
+          "comment": "Best photography team I've hired so far!",
+          "date": "2025-03-20"
+        },
+        {
+          "name": "Shruti Bansal",
+          "rating": 4.2,
+          "comment": "Creative angles and natural lighting use.",
+          "date": "2025-04-08"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Click Factory",
+      "location": "Mumbai",
+      "price": 8000,
+      "rating": 4.8,
+      "styles": ["Studio", "Outdoor", "Traditional"],
+      "tags": ["Wedding", "Pre-wedding"],
+      "bio": "Capturing timeless wedding stories across India.",
+      "profilePic": "https://img.freepik.com/premium-photo/portrait-satisfied-businessman-gray-suit-glasses_1258-33513.jpg?semt=ais_hybrid&w=740",
+      "portfolio": [
+        "https://i.pinimg.com/736x/f8/ec/30/f8ec30fdb8af4093b8d35c24fabd0523.jpg",
+        "https://images.naptol.com/usr/local/csp/staticContent/product_images/horizontal/750x750/Sumangali-Jewellery-Collection-o1.jpg",
+        "https://i.ebayimg.com/images/g/emUAAOSwpstjYhV9/s-l1200.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Rahul",
+          "rating": 5,
+          "comment": "We loved every single moment they captured.",
+          "date": "2025-01-22"
+        },
+        {
+          "name": "Amit Rathi",
+          "rating": 4.8,
+          "comment": "Quick turnaround and excellent quality.",
+          "date": "2025-01-15"
+        },
+        {
+          "name": "Pooja Singh",
+          "rating": 3.0,
+          "comment": "Photos were good, but service was slow.",
+          "date": "2025-02-10"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Moments by Neha",
+      "location": "Bengaluru",
+      "price": 12000,
+      "rating": 4.3,
+      "styles": ["Outdoor", "Candid"],
+      "tags": ["Maternity", "Couple"],
+      "bio": "Natural light specialist focusing on emotional storytelling.",
+      "profilePic": "https://t4.ftcdn.net/jpg/04/28/23/33/360_F_428233341_bt0IoWMEvgpu3Zir5zyXQ9KUGy7E64LX.jpg",
+      "portfolio": [
+        "https://thumbs.dreamstime.com/b/modern-one-storey-private-houses-russia-house-outside-fence-118970895.jpg",
+        "https://as1.ftcdn.net/jpg/01/67/77/50/1000_F_167775028_au9cnBM83kBM2ZWfjTHuMFfaT5e2Nt7o.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Sneha",
+          "rating": 4.5,
+          "comment": "Captured our maternity journey so beautifully.",
+          "date": "2024-11-05"
+        },
+        {
+          "name": "Neha Sharma",
+          "rating": 5.0,
+          "comment": "Amazing photos! Loved the edits and candids.",
+          "date": "2024-11-12"
+        },
+        {
+          "name": "Anjali Mehra",
+          "rating": 4.0,
+          "comment": "Very professional, but slightly pricey.",
+          "date": "2024-12-01"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Snapshot Studio",
+      "location": "Hyderabad",
+      "price": 7000,
+      "rating": 3.9,
+      "styles": ["Studio"],
+      "tags": ["Birthday", "Family"],
+      "bio": "Affordable indoor shoots with creative themes.",
+      "profilePic": "https://img.freepik.com/free-photo/beautiful-woman-walking-spring-park_1157-21357.jpg?semt=ais_hybrid&w=740",
+      "portfolio": [
+        "https://images.unsplash.com/photo-1486365227551-f3f90034a57c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://www.theweek.in/content/dam/week/news/sci-tech/images/2022/4/5/macaw-bird.jpg.transform/schema-4x3/image.jpg",
+        "https://cdn.pixabay.com/photo/2017/11/02/00/34/parrot-2909828_1280.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Vikram",
+          "rating": 3.5,
+          "comment": "Decent service, could improve on punctuality.",
+          "date": "2024-09-10"
+        },
+        {
+          "name": "Ram Kumar",
+          "rating": 4.5,
+          "comment": "Great experience! Would book again.",
+          "date": "2024-10-05"
+        }
+      ]
     }
   ]
 }

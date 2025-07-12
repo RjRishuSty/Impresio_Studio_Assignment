@@ -5,10 +5,9 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Modal,
   TextField,
-  Typography,
 } from "@mui/material";
+import { enqueueSnackbar } from "notistack";
 import React, { useState } from "react";
 
 const InquiryModal = ({ openModal, setOpenModal }) => {
@@ -18,14 +17,31 @@ const InquiryModal = ({ openModal, setOpenModal }) => {
   const handleFormChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  const handleValidate = () => {
+    if (!formData.name) {
+      enqueueSnackbar("Name field is required", { variant: "error" });
+      return false;
+    }
+    if (!formData.message) {
+      enqueueSnackbar("Write you query.", { variant: "error" });
+      return false;
+    }
+    return true;
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Inquiry submitted", formData);
+    if (!handleValidate()) return;
+    enqueueSnackbar("Inquiry submit successfully", { variant: "success" });
     handleClose();
   };
-  
+
   return (
-    <Dialog component="form" onSubmit={handleSubmit} open={openModal} onClose={handleClose}>
+    <Dialog
+      component="form"
+      onSubmit={handleSubmit}
+      open={openModal}
+      onClose={handleClose}
+    >
       <DialogTitle>Send Inquiry</DialogTitle>
       <DialogContent>
         <TextField
@@ -49,7 +65,7 @@ const InquiryModal = ({ openModal, setOpenModal }) => {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>Cancel</Button>
-        <Button variant="contained" onClick={handleClose}>
+        <Button type="submit" variant="contained" onClick={handleClose}>
           Submit
         </Button>
       </DialogActions>

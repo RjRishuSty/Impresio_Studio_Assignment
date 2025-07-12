@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Typography, Stack, useMediaQuery } from "@mui/material";
+import { Grid, Typography, Stack, useMediaQuery, Button } from "@mui/material";
 import SearchOffIcon from "@mui/icons-material/SearchOff";
 import axios from "axios";
 import Cards from "../components/Cards";
@@ -15,13 +15,13 @@ const CategoryPage = () => {
   //* All states...............
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(5);
   const userData = useSelector((state) => state.userData.data);
   const { data, isActive, heading } = useSelector((state) => state.filterData);
   const isFiltered = isActive;
   const displayData = isFiltered ? data : userData;
   const showNotFound = isFiltered && data.length === 0 && !loading;
 
-  console.log(isActive);
   //*Style...
   const isMinLaptop = useMediaQuery("(max-width:1339px)");
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -95,11 +95,23 @@ const CategoryPage = () => {
               </Stack>
             ) : (
               <Grid container spacing={2} sx={{ p: 1 }}>
-                {displayData.map((item) => (
+                {displayData.slice(0, visibleCount).map((item) => (
                   <Grid size={{ xs: 12, sm: 12, md: 4 }} key={item.id}>
                     <Cards data={item} />
                   </Grid>
                 ))}
+                <Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                  {displayData.length >= visibleCount && (
+                    <Stack alignItems="center" mt={2}>
+                      <Button
+                        variant="outlined"
+                        onClick={() => setVisibleCount((prev) => prev + 6)}
+                      >
+                        Load More
+                      </Button>
+                    </Stack>
+                  )}
+                </Grid>
               </Grid>
             )}
           </Grid>

@@ -27,7 +27,7 @@ const SidebarFilter = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userData.data);
-  const {data, price, rating, styles,isActive, search} = useSelector((state) => state.filterData);
+  const { price, rating, styles,isActive, search} = useSelector((state) => state.filterData);
 
   useEffect(() => {
   let result = [...userData];
@@ -58,7 +58,7 @@ const SidebarFilter = () => {
   } 
 }, [price, rating, styles, userData, dispatch]);
 
-console.log(data,"result")
+
   //* This handle work only styles change .................
   const handleStyleChange = (style, checked) => {
     const updatedStyles = checked
