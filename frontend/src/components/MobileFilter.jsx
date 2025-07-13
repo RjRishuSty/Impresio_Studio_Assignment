@@ -17,7 +17,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import SidebarFilter from "./SidebarFilter";
 
-
+ 
 const MobileFilter = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);

@@ -9,9 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchInput from "../components/SearchInput";
 import SkeletonLoader from "../components/SkeletonLoader";
 import { handleGetHeading } from "../redux/slices/filterData.slice";
-import MobileFilter from "../components/Mobilefilter";
+import MobileFilter from "../components/MobileFilter";
 
-const CategoryPage = () => {
+function CategoryPage() {
   //* All states...............
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
@@ -100,7 +100,7 @@ const CategoryPage = () => {
                     <Cards data={item} />
                   </Grid>
                 ))}
-                <Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   {displayData.length >= visibleCount && (
                     <Stack alignItems="center" mt={2}>
                       <Button
@@ -119,6 +119,6 @@ const CategoryPage = () => {
       </Stack>
     </>
   );
-};
+}
 
 export default CategoryPage;
