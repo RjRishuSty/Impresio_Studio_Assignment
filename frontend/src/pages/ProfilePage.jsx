@@ -31,7 +31,6 @@ const ProfilePage = () => {
         const response = await axios.get(
           `https://pixisphere-api-b4dq.onrender.com/photographers?id=${id}`
         );
-        console.log(response.data);
         dispatch(handleFilterUser(response.data[0]));
       } catch (error) {
         console.log(error);
@@ -41,7 +40,6 @@ const ProfilePage = () => {
     };
     fetchUser();
   }, [id]);
-  console.log(user, "ac");
 
   const handleOpen = () => setOpenModal(true);
 
@@ -65,8 +63,8 @@ const ProfilePage = () => {
                 sx={{
                   pl: 2,
                   pr: 2.5,
-                  borderRight: {sm:"",md:"2px solid #ccc"},
-                  order:{xs:2,sm:2,md:1}
+                  borderRight: { sm: "", md: "2px solid #ccc" },
+                  order: { xs: 2, sm: 2, md: 1 },
                 }}
               >
                 <Typography
@@ -116,7 +114,7 @@ const ProfilePage = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  order:{xs:1,sm:1,md:2},
+                  order: { xs: 1, sm: 1, md: 2 },
                 }}
               >
                 <Slider data={user.portfolio} useIn="showImg" />
