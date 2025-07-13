@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchInput from "../components/SearchInput";
 import SkeletonLoader from "../components/SkeletonLoader";
 import { handleGetHeading } from "../redux/slices/filterData.slice";
-import MobileFilter from "../components/Mobilefilter";
+import MobileFilter from "../components/MobileFilter";
 
 const CategoryPage = () => {
   //* All states...............
